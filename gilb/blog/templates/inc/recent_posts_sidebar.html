@@ -1,0 +1,11 @@
+{% for i in posts %}
+<div class="media post_item">
+    <img src="{{i.image.url}}" width="100" height="60" alt="post">
+    <div class="media-body">
+        <a href="single-blog.html">
+            <h3>{{i.title|safe}}</h3>
+        </a>
+        <p>{{i.created_at}}</p>
+    </div>
+</div>
+{% endfor %}

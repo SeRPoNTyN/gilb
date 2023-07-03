@@ -1,0 +1,7 @@
+{% for i in categories %}
+<li>
+    <a href="{{i.get_absolute_url}}" class="d-flex">
+        <p>{{i.title}} <span> ({{i.count}})</span></p>
+    </a>
+</li>
+{% endfor %}

@@ -1,0 +1,45 @@
+<!-- recent project part start -->
+
+<style>
+   .philosophy_text h2{
+
+    color: white; /* Цвет линии для IE6-7 */
+
+   }
+
+</style>
+<section class="related_project padding_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section_tittle">
+                    <h2>Recent work</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+            {% for i in recent_projects %}
+            <div class="col-lg-4 col-sm-6">
+                <div class="card border-dark">
+                    <div class="single_project_details">
+
+                        <a href="{{i.get_absolute_url}}" class="grid-item img_gallery">
+                            <div class="box">
+                                <img src="{{i.main_image.url}}" alt="">
+                            </div>
+                            <div class="card-body bg-primary">
+                                <div class="philosophy_text">
+                                    <h2>{{i.title|title}}</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!-- recent project part end -->
